@@ -1,0 +1,11 @@
+{
+    "extension_description": {
+        "message": "An extension to download course documents from K12Online"
+    },
+    "document_title_text": {
+        "message": "Document title"
+    },
+    "document_date_text": {
+        "message": "Document date"
+    }
+}
