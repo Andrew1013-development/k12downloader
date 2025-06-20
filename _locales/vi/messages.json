@@ -1,11 +1,17 @@
 {
     "extension_description": {
-        "message": "Một trình mở rộng để tải xuống tài liệu từ bài học K12Online"
+        "message": "Một tiện ích mở rộng để tải xuống tài liệu từ bài học K12Online"
     },
     "document_title_text": {
-        "message": "Tên tài liệu"
+        "message": "Tên tài liệu: "
     },
     "document_date_text": {
-        "message": "Ngày đăng tải"
+        "message": "Ngày đăng tải: "
+    },
+    "no_document_text": {
+        "message": "Không tìm thấy tài liệu nào trong trang này."
+    },
+    "inject_button_text": {
+        "message": "Thêm nút tải xuống vào trang: "
     }
 }

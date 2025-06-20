@@ -3,9 +3,15 @@
         "message": "An extension to download course documents from K12Online"
     },
     "document_title_text": {
-        "message": "Document title"
+        "message": "Document title: "
     },
     "document_date_text": {
-        "message": "Document date"
+        "message": "Document date: "
+    },
+    "no_document_text": {
+        "message": "No document detected in this page."
+    },
+    "inject_button_text": {
+        "message": "Inject download button: "
     }
 }

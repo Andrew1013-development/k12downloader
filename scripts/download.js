@@ -8,22 +8,27 @@ function parse(document_link) {
 
 const lesson_title = document.querySelector("div.panel-title");
 const material = document.querySelector("div.content-coursewarePdf");
+const action_button = document.querySelector(".action-btn");
+
 // download course material
 if (material) {
     chrome.storage.local.set({ type: 1 });
     let document_info = parse(material.getAttribute("data-file"));
     chrome.storage.local.set({ document_name: document_info.name });
     chrome.storage.local.set({ document_date: document_info.date });
-    const action_button = document.querySelector(".action-btn");
-    let download_button = `<a class="btn btn-default margin-left-2xs learning-comment-btn btn-secondary text-medium" href=${material.getAttribute("data-file")} target="_blank">
-        <i class="vi vi-download"></i>
-        <span>Tải tài liệu</span>
-    </a>`
-    action_button.insertAdjacentHTML("beforebegin", download_button);
+    chrome.storage.sync.get("inject").then(result => {
+        if (result.inject) {
+            let download_button = `<a class="btn btn-default margin-left-2xs learning-comment-btn btn-secondary text-medium" href=${material.getAttribute("data-file")} target="_blank">
+                <i class="vi vi-download"></i>
+                <span>Tải tài liệu</span>
+            </a>`
+            action_button.insertAdjacentHTML("beforebegin", download_button);
+        }
+    });    
 }
 // download course text
 const text = null;
-if (text) {
+if (text) { 
     chrome.storage.local.set({ type: 2})
 }
 

@@ -3,13 +3,20 @@
     <body>
         <link rel="stylesheet" type="text/css" href="popup.css">
         <h1>K12 Downloader</h1>
+        <form id="settings">
+            <label id="inject_choice"></label>
+            <input type="checkbox" id="inject">
+            <button id="refresh" style="display: none;">Refresh</button>
+        </form>
+        <div class="stats"></div>
         <div id="no_document">
-            <p>No document detected in this page.</p>
+            <p id="no_document_text"></p>
         </div>
         <div id="document" style="display: none;">
             <p id="document_title"></p>
             <p id="document_date"></p>
         </div>
+        <script src="localization.js"></script>
         <script src="popup.js"></script>
     </body>
 </html>
