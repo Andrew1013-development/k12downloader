@@ -1,9 +1,10 @@
 {
     "name": "K12 Downloader",
     "description": "__MSG_extension_description__",
-    "version": "0.1.0",
+    "version": "1.0.0",
     "manifest_version": 3,
     "default_locale": "vi",
+    "permissions": [ "storage" ],
     "action": {
         "default_popup": "popup/popup.html"
     },
@@ -14,6 +15,5 @@
                 "https://hcm.k12online.vn/*/page/LMS/Lesson/Courseware/learn/*"
             ]
         }   
-    ],
-    "permissions": [ "storage" ]
+    ]
 }

@@ -28,6 +28,10 @@ if (text) {
 }
 
 window.addEventListener("beforeunload", () => {
-    chrome.storage.local.clear();
-    chrome.storage.local.set({ type: 0 });
+    try {
+        chrome.storage.local.clear();
+        chrome.storage.local.set({ type: 0 });
+    } catch (error) {
+        console.log(error);
+    }
 })
